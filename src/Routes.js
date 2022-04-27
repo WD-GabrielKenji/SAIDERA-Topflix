@@ -9,14 +9,26 @@ export function Routes() {
       <Route exact path="/">
         <HomePage />
       </Route>
-      <Route exact path="/statistics">
-        <h1>Statistics Page</h1>
+      <Route exact path="/eua">
+        <h1>EUA Page</h1>
       </Route>
-      <Route exact path="/customers">
-        <h1>Customers Page</h1>
+      <Route exact path="/br">
+        <h1>BR Page</h1>
       </Route>
-      <Route exact path="/diagrams">
-        <h1>Diagrams Page</h1>
+      <Route exact path="/uk">
+        <h1>UK Page</h1>
+      </Route>
+      <Route exact path="/kor">
+        <h1>KOR Page</h1>
+      </Route>
+      <Route exact path="/uk">
+        <h1>CAN Page</h1>
+      </Route>
+      <Route exact path="/jp">
+        <h1>JP Page</h1>
+      </Route>
+      <Route exact path="/MUDAR">
+        <h1>*ADICIONAL*</h1>
       </Route>
     </Switch>
   );

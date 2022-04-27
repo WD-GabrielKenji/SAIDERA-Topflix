@@ -1,22 +1,19 @@
 import React, { useContext, useRef, useState } from "react";
-import { MdLogout, MdOutlineAnalytics } from "react-icons/md";
 import { useLocation } from "react-router-dom";
-import { BsPeople } from "react-icons/bs";
 
 import {
-  AiOutlineApartment,
   AiOutlineHome,
   AiOutlineLeft,
   AiOutlineSearch,
   AiOutlineSetting,
 } from "react-icons/ai";
+
 import {
   SDivider,
   SLink,
   SLinkContainer,
   SLinkIcon,
   SLinkLabel,
-  SLinkNotification,
   SLogo,
   SSearch,
   SSearchIcon,
@@ -28,7 +25,7 @@ import {
   SToggleThumb,
 } from "./styles";
 
-import { logoSVG } from "../../assets";
+import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP } from "../../assets";
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
@@ -42,7 +39,7 @@ export function Sidebar() {
       setSidebarOpen(true);
       searchRef.current.focus();
     } else {
-      // search functionality
+      // search functionality *Adicionar*
     }
   };
 
@@ -56,9 +53,14 @@ export function Sidebar() {
           <AiOutlineLeft />
         </SSidebarButton>
       </>
-      <SLogo>
+
+      <SLogo style={!sidebarOpen ? { width: `fit-content` } : {}}>
         <img src={logoSVG} alt="logo" />
+        {sidebarOpen && (
+          <h2>SAIDERA <span>TopFlix</span></h2>
+        )}
       </SLogo>
+
       <SSearch
         onClick={searchClickHandler}
         style={!sidebarOpen ? { width: `fit-content` } : {}}
@@ -72,33 +74,35 @@ export function Sidebar() {
           style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
         />
       </SSearch>
+
       <SDivider />
-      {linksArray.map(({ icon, label, notification, to }) => (
+
+      {linksArray.map(({ icon, label, to }) => (
         <SLinkContainer key={label} isActive={pathname === to}>
           <SLink to={to} style={!sidebarOpen ? { width: `fit-content` } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
             {sidebarOpen && (
               <>
                 <SLinkLabel>{label}</SLinkLabel>
-                {/* if notifications are at 0 or null, do not display */}
-                {!!notification && (
-                  <SLinkNotification>{notification}</SLinkNotification>
-                )}
               </>
             )}
           </SLink>
         </SLinkContainer>
       ))}
+
       <SDivider />
-      {secondaryLinksArray.map(({ icon, label }) => (
-        <SLinkContainer key={label}>
-          <SLink to="/" style={!sidebarOpen ? { width: `fit-content` } : {}}>
+
+      {secondaryLinksArray.map(({ icon, label, to }) => (
+        <SLinkContainer key={label} isActive={pathname === to}>
+          <SLink to={to} style={!sidebarOpen ? { width: `fit-content` } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
             {sidebarOpen && <SLinkLabel>{label}</SLinkLabel>}
           </SLink>
         </SLinkContainer>
       ))}
+
       <SDivider />
+
       <STheme>
         {sidebarOpen && <SThemeLabel>Dark Mode</SThemeLabel>}
         <SThemeToggler
@@ -108,6 +112,7 @@ export function Sidebar() {
           <SToggleThumb style={theme === "dark" ? { right: "1px" } : {}} />
         </SThemeToggler>
       </STheme>
+      
     </SSidebar>
   );
 }
@@ -117,35 +122,43 @@ const linksArray = [
     label: "Home",
     icon: <AiOutlineHome />,
     to: "/",
-    notification: 0,
   },
   {
-    label: "Statistics",
-    icon: <MdOutlineAnalytics />,
-    to: "/statistics",
-    notification: 3,
+    label: "Estados Unidos",
+    icon: <img src={iconEUA} alt="Estados Unidos da América" />,
+    to: "/eua",
   },
   {
-    label: "Customers",
-    icon: <BsPeople />,
-    to: "/customers",
-    notification: 0,
+    label: "Brasil",
+    icon: <img src={iconBR} alt="Brasil" />,
+    to: "/br",
   },
   {
-    label: "Diagrams",
-    icon: <AiOutlineApartment />,
-    to: "/diagrams",
-    notification: 1,
+    label: "Reino Unido",
+    icon: <img src={iconUK} alt="Reino Unido" />,
+    to: "/uk",
   },
+  {
+    label: "Coreia do Sul",
+    icon: <img src={iconKOR} alt="Coreia do Sul" />,
+    to: "/kor",
+  },
+  {
+    label: "Canadá",
+    icon: <img src={iconCAN} alt="Canadá" />,
+    to: "/can",
+  },
+  {
+    label: "Japão",
+    icon: <img src={iconJP} alt="Japão" />,
+    to: "/jp",
+  }
 ];
 
 const secondaryLinksArray = [
   {
-    label: "Settings",
+    label: "Opicional",
     icon: <AiOutlineSetting />,
-  },
-  {
-    label: "Logout",
-    icon: <MdLogout />,
+    to: "/MUDAR",
   },
 ];

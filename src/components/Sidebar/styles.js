@@ -8,7 +8,6 @@ export const SSidebar = styled.div`
   background: ${({ theme }) => theme.bg};
   height: 100vh;
   padding: ${v.lgSpacing};
-
   position: relative;
 `;
 
@@ -21,8 +20,7 @@ export const SSidebarButton = styled.button`
   height: 32px;
   border-radius: 50%;
   background: ${({ theme }) => theme.bg};
-  box-shadow: 0 0 4px ${({ theme }) => theme.bg3},
-    0 0 7px ${({ theme }) => theme.bg};
+  box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,14 +30,25 @@ export const SSidebarButton = styled.button`
 `;
 
 export const SLogo = styled.div`
-  width: 90px;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Serif', sans-serif;
+  font-size: 0.75rem;
 
   img {
     max-width: 100%;
     height: auto;
+    display: inline;
+  }
+  h2{
+    color: ${({ theme, isActive }) => !isActive ? theme.gold : theme.gold};
+    margin-left: 5px;
+  
+    span{
+      color: rgba(215, 21, 21, 0.95);
+    }
   }
   cursor: pointer;
-
   margin-bottom: ${v.lgSpacing};
 `;
 
@@ -80,8 +89,7 @@ export const SDivider = styled.div`
 `;
 
 export const SLinkContainer = styled.div`
-  background: ${({ theme, isActive }) =>
-    !isActive ? `transparent` : theme.bg3};
+  background: ${({ theme, isActive }) => !isActive ? `transparent` : theme.bg4};
   border-radius: ${v.borderRadius};
   margin: 8px 0;
 
@@ -104,24 +112,16 @@ export const SLinkIcon = styled.div`
   display: flex;
 
   svg {
-    font-size: 20px;
+    font-size: 24px;
   }
 `;
 
 export const SLinkLabel = styled.span`
   display: block;
   flex: 1;
-  margin-left: ${v.smSpacing};
-`;
-
-export const SLinkNotification = styled.div`
-  font-size: 14px;
-  padding: calc(${v.smSpacing} / 2) ${v.smSpacing};
-  border-radius: calc(${v.borderRadius} / 2);
-  background: ${({ theme }) => theme.primary};
-  color: white;
-
-  margin-right: ${v.mdSpacing};
+  margin-left: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 `;
 
 export const STheme = styled.div`
@@ -129,10 +129,12 @@ export const STheme = styled.div`
   align-items: center;
   font-size: 16px;
 `;
+
 export const SThemeLabel = styled.span`
   display: block;
   flex: 1;
 `;
+
 export const SThemeToggler = styled.button`
   ${btnReset};
   margin: 0 auto;
@@ -140,8 +142,7 @@ export const SThemeToggler = styled.button`
   width: 36px;
   height: 20px;
   border-radius: 10px;
-  background: ${({ theme, isActive }) =>
-    !isActive ? theme.bg3 : theme.primary};
+  background: ${({ theme, isActive }) => !isActive ? theme.bg3 : theme.gold};
 
   position: relative;
 `;
