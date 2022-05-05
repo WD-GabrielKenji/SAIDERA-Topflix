@@ -6,7 +6,7 @@ import { btnReset, v } from "../../styles/variables";
 export const SSidebar = styled.div`
   width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
   background: ${({ theme }) => theme.bg};
-  height: 100vh;
+  height: 100vh * 2;
   padding: ${v.lgSpacing};
   position: relative;
 `;
@@ -33,7 +33,7 @@ export const SLogo = styled.div`
   display: flex;
   align-items: center;
   font-family: 'Noto Serif', sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
 
   img {
     max-width: 100%;
@@ -89,7 +89,7 @@ export const SDivider = styled.div`
 `;
 
 export const SLinkContainer = styled.div`
-  background: ${({ theme, isActive }) => !isActive ? `transparent` : theme.bg4};
+  background: ${({ theme, isActive }) => !isActive ? `transparent` : theme.bg3};
   border-radius: ${v.borderRadius};
   margin: 8px 0;
 
@@ -133,6 +133,8 @@ export const STheme = styled.div`
 export const SThemeLabel = styled.span`
   display: block;
   flex: 1;
+
+  font-weight: 400;
 `;
 
 export const SThemeToggler = styled.button`

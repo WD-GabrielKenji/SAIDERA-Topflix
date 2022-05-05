@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { HomePage } from "./pages/HomePage";
+import { HomePage } from "./pages/HomePage/HomePage";
 
 export function Routes() {
   return (
@@ -27,8 +27,8 @@ export function Routes() {
       <Route exact path="/jp">
         <h1>JP Page</h1>
       </Route>
-      <Route exact path="/MUDAR">
-        <h1>*ADICIONAL*</h1>
+      <Route exact path="/guia">
+        <h1>*ADICIONAR*</h1>
       </Route>
     </Switch>
   );

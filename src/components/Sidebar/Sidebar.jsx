@@ -2,10 +2,8 @@ import React, { useContext, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import {
-  AiOutlineHome,
   AiOutlineLeft,
   AiOutlineSearch,
-  AiOutlineSetting,
 } from "react-icons/ai";
 
 import {
@@ -25,7 +23,7 @@ import {
   SToggleThumb,
 } from "./styles";
 
-import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP } from "../../assets";
+import { logoSVG, homeIcon, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon } from "../../assets";
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
@@ -57,7 +55,7 @@ export function Sidebar() {
       <SLogo style={!sidebarOpen ? { width: `fit-content` } : {}}>
         <img src={logoSVG} alt="logo" />
         {sidebarOpen && (
-          <h2>SAIDERA <span>TopFlix</span></h2>
+          <h2>SAIDEIRA <span>TopFlix</span></h2>
         )}
       </SLogo>
 
@@ -120,7 +118,7 @@ export function Sidebar() {
 const linksArray = [
   {
     label: "Home",
-    icon: <AiOutlineHome />,
+    icon: <img src={homeIcon} alt="Página principal" />, 
     to: "/",
   },
   {
@@ -157,8 +155,8 @@ const linksArray = [
 
 const secondaryLinksArray = [
   {
-    label: "Opicional",
-    icon: <AiOutlineSetting />,
-    to: "/MUDAR",
+    label: "Guia",
+    icon: <img src={guiaIcon} alt="Ajuda" />, 
+    to: "/guia",
   },
 ];
