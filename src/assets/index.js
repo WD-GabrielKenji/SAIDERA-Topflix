@@ -13,6 +13,7 @@ import UkSVG from './paises/uk1.svg';
 import KorSVG from './paises/kor1.svg';
 import CanSVG from './paises/can1.svg';
 import JpSVG from './paises/jp1.svg';
+import MundoSVG from './paises/mundo.svg';
 import GuiaSVG from './guia.svg';
 
 export const logoSVG = logo;
@@ -31,3 +32,4 @@ export const iconKOR = KorSVG;
 export const iconCAN = CanSVG;
 export const iconJP = JpSVG;
 export const guiaIcon = GuiaSVG;
+export const iconMundo = MundoSVG;
