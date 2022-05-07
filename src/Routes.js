@@ -2,6 +2,12 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import { HomePage } from "./pages/HomePage/HomePage";
+import Brasil from "./pages/Paises/Brasil/Brasil";
+import Coreia from "./pages/Paises/CoreiaDoSul/Coreia";
+import Eua from "./pages/Paises/EUA/Eua";
+import Japao from "./pages/Paises/Japao/Japao";
+import UK from "./pages/Paises/ReinoUnido/ReinoUnido";
+import Canada from "./pages/Paises/Canada/Canada";
 
 export function Routes() {
   return (
@@ -10,22 +16,22 @@ export function Routes() {
         <HomePage />
       </Route>
       <Route exact path="/eua">
-        <h1>EUA Page</h1>
+        <Eua/>
       </Route>
       <Route exact path="/br">
-        <h1>BR Page</h1>
+        <Brasil/>
       </Route>
       <Route exact path="/uk">
-        <h1>UK Page</h1>
+        <UK/>
       </Route>
       <Route exact path="/kor">
-        <h1>KOR Page</h1>
+        <Coreia/>
       </Route>
-      <Route exact path="/uk">
-        <h1>CAN Page</h1>
+      <Route exact path="/can">
+        <Canada/>
       </Route>
       <Route exact path="/jp">
-        <h1>JP Page</h1>
+        <Japao/>
       </Route>
       <Route exact path="/guia">
         <h1>*ADICIONAR*</h1>

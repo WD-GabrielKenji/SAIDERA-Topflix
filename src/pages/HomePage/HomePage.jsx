@@ -67,7 +67,7 @@ const linkArrayCards = [
     text: "Apresentar a porcentagem dos gêneros que estão sendo mais queridos de filmes e séries da plataforma Netflix nos países.",
   },
   {
-    label: "BENEFICIO",
+    label: "BENEFÍCIO",
     icon: <img src={benefitIcon} alt="Beneficio" />,
     text: "Confira os dados apresentados, melhores seus resultados e adquira mais informações para tomar uma decisão.",
   },
