@@ -23,7 +23,7 @@ import {
   SToggleThumb,
 } from "./styles";
 
-import { logoSVG, homeIcon, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon } from "../../assets";
+import { logoSVG, homeIcon, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon, iconMundo } from "../../assets";
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
@@ -53,10 +53,12 @@ export function Sidebar() {
       </>
 
       <SLogo style={!sidebarOpen ? { width: `fit-content` } : {}}>
-        <img src={logoSVG} alt="logo" />
-        {sidebarOpen && (
-          <h2>SAIDEIRA <span>TopFlix</span></h2>
-        )}
+        <SLink to={"/"} >
+          <img src={logoSVG} alt="logo" />
+          {sidebarOpen && (
+            <h2>SAIDEIRA <span>TopFlix</span></h2>
+          )}
+        </SLink>
       </SLogo>
 
       <SSearch
@@ -117,9 +119,9 @@ export function Sidebar() {
 
 const linksArray = [
   {
-    label: "Home",
-    icon: <img src={homeIcon} alt="Página principal" />, 
-    to: "/",
+    label: "Mundo Todo",
+    icon: <img src={iconMundo} alt="Página principal" />, 
+    to: "/mundi",
   },
   {
     label: "Estados Unidos",
