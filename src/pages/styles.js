@@ -13,6 +13,24 @@ export const SGrafico = styled.div`
   margin-bottom: 1vw;
 `
 
+export const SAnalise = styled.div`
+  width: 70vh;
+  padding: 2.5%;
+
+  border-radius: 47px;
+  background: ${({ theme }) => theme.bg5};
+  box-shadow:  -20px 20px 23px ${({ theme }) => theme.cardShadow},
+               20px -20px 23px ${({ theme }) => theme.cardShadow2};
+
+  :hover{
+    transform: scale(1.04);
+  }
+
+  @media (max-width: 1366px){
+    margin-top: 3.3vw;
+  }
+`; 
+
 export const Cards = styled.div`
   display: flex;
   justify-content: space-around;

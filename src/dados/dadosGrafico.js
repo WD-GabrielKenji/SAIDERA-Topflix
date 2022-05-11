@@ -1,9 +1,9 @@
 export const populacao = [
-    ["Country", "Popularity"],
-    ["Japan", 200],
-    ["United States", 300],
-    ["South Korea", 300],
-    ["Brazil", 400],
-    ["Canada", 500],
-    ["United Kingdom", 600]
+    ["Country", "População (milhões)"],
+    ["Japan", 125.8],
+    ["United States", 329.5],
+    ["South Korea", 51.78],
+    ["Brazil", 212.6],
+    ["Canada", 38.01],
+    ["United Kingdom", 67.22]
 ];

@@ -1,5 +1,5 @@
 import { ChartDonut, ChartBar, ChartGeo } from "../../components/Grafico/Chart"
-import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosBrasil"
+import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosReinoUnido"
 import { 
   SMain, 
   SGrafico, 
@@ -7,7 +7,8 @@ import {
   SCard,
   SCardLabel,
   SDivider,
-  SCardText
+  SCardText,
+  SAnalise
 } from "../styles"
 
 export default function ReinoUnido() {
@@ -34,6 +35,15 @@ export default function ReinoUnido() {
         <SGrafico>
           <ChartGeo regiao='GB'/>
         </SGrafico>
+        <SGrafico>
+          <SAnalise key='analise'>
+            <SCardLabel>Análise</SCardLabel>
+            <SDivider />
+            <SCardText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos
+              chegar a conclusão que o melhor investimento seria para a parte de Comédia.
+            </SCardText>
+          </SAnalise>
+        </SGrafico>
       </SMain>
     </>
   )
@@ -42,18 +52,18 @@ export default function ReinoUnido() {
 const linkArrayCards = [
   {
     label: "Ação",
-    text: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="acao"/>,
   },
   {
     label: "Terror",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="terror"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
   },
   {
     label: "Comédia",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="40%" genero="comedia"/>,
   },
   {
     label: "Romance",
-    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="romance"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="20%" genero="romance"/>,
   },
 ];

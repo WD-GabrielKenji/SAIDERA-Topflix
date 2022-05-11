@@ -1,5 +1,5 @@
 import { ChartDonut, ChartBar, ChartGeo } from "../../components/Grafico/Chart"
-import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosBrasil"
+import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosMundo"
 import { 
   SMain, 
   SGrafico, 
@@ -7,7 +7,8 @@ import {
   SCard,
   SCardLabel,
   SDivider,
-  SCardText
+  SCardText,
+  SAnalise
 } from "../styles"
 
 export default function Mundo() {
@@ -27,12 +28,21 @@ export default function Mundo() {
           <ChartBar data={dataFilme} title="Gêneros de filmes mais assistidos" dataKey1="1º Semana" dataKey2="2º Semana" dataKey3="3º Semana" dataKey4="4º Semana"/>
         </SGrafico>
         <SGrafico>
-        <ChartBar data={dataSerie} title="Gêneros de séries mais assistidos" dataKey1="1º Semana" dataKey2="2º Semana" dataKey3="3º Semana" dataKey4="4º Semana"/>
+          <ChartBar data={dataSerie} title="Gêneros de séries mais assistidos" dataKey1="1º Semana" dataKey2="2º Semana" dataKey3="3º Semana" dataKey4="4º Semana"/>
         </SGrafico>
       </SMain>
       <SMain>
         <SGrafico>
-          <ChartGeo/>
+          <ChartGeo regiao='world'/>
+        </SGrafico>
+        <SGrafico>
+          <SAnalise key='analise'>
+            <SCardLabel>Análise</SCardLabel>
+            <SDivider />
+            <SCardText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos
+              chegar a conclusão que o melhor investimento seria para a parte de Ação.
+            </SCardText>
+          </SAnalise>
         </SGrafico>
       </SMain>
     </>
@@ -46,7 +56,7 @@ const linkArrayCards = [
   },
   {
     label: "Terror",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="terror"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
   },
   {
     label: "Comédia",
@@ -54,6 +64,6 @@ const linkArrayCards = [
   },
   {
     label: "Romance",
-    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="romance"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
   },
 ];

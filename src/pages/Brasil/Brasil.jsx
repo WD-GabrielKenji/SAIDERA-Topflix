@@ -7,7 +7,8 @@ import {
   SCard,
   SCardLabel,
   SDivider,
-  SCardText
+  SCardText,
+  SAnalise
 } from "../styles"
 
 export default function Brasil() {
@@ -34,6 +35,15 @@ export default function Brasil() {
         <SGrafico>
           <ChartGeo regiao='BR'/>
         </SGrafico>
+        <SGrafico>
+          <SAnalise key='analise'>
+            <SCardLabel>Análise</SCardLabel>
+            <SDivider />
+            <SCardText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos
+              chegar a conclusão que o melhor investimento seria para a parte de Ação.
+            </SCardText>
+          </SAnalise>
+        </SGrafico>
       </SMain>
     </>
   )
@@ -46,7 +56,7 @@ const linkArrayCards = [
   },
   {
     label: "Terror",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="terror"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
   },
   {
     label: "Comédia",
@@ -54,6 +64,6 @@ const linkArrayCards = [
   },
   {
     label: "Romance",
-    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="romance"/>,
+    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
   },
 ];
