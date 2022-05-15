@@ -2,86 +2,83 @@ import styled from "styled-components";
 
 import { v } from "../styles/variables";
 
-// Top Brasil
-export const SMain = styled.div`
+// Cards
+export const CardsContainer = styled.div`
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: ${v.xlSpacing};
 `;
-
-export const SGrafico = styled.div`
-  width: 70vh;
-  margin-left: 50px;
-  margin-bottom: 1vw;
-`
-
-export const SAnalise = styled.div`
-  width: 70vh;
-  padding: 2.5%;
-
-  border-radius: 47px;
-  background: ${({ theme }) => theme.bg5};
-  box-shadow:  -20px 20px 23px ${({ theme }) => theme.cardShadow},
-               20px -20px 23px ${({ theme }) => theme.cardShadow2};
-
-  :hover{
-    transform: scale(1.04);
-  }
-
-  @media (max-width: 1366px){
-    margin-top: 3.3vw;
-  }
-`; 
 
 export const Cards = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1vw;
-  margin-left: 50px;
-  flex-wrap: wrap;
-`;
-
-export const SCard = styled.div`
-  width: 35vh;
-  padding: 2.5%;
+  width: 37vh;
+  height: 38vh;
+  padding: 2%;
 
   border-radius: 47px;
   background: ${({ theme }) => theme.bg5};
   box-shadow:  -20px 20px 23px ${({ theme }) => theme.cardShadow},
-               20px -20px 23px ${({ theme }) => theme.cardShadow2};
+                20px -20px 23px ${({ theme }) => theme.cardShadow2};
 
   :hover{
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
+`;
 
-  @media (max-width: 1366px){
-    margin-top: 3.3vw;
-  }
-`; 
+export const SLabel = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const SIcon = styled.div`
+  margin-right: 0.67rem;
+`;
+
+export const STitle = styled.h2`
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: ${({ theme }) => theme.textTitle};
+  letter-spacing: 1.2px;
+`;
 
 export const SDivider = styled.div`
   height: 0.5px;
   width: 100%;
+  margin: 6px 0;
   background: ${({ theme }) => theme.divider};
-  margin-bottom: ${v.lgSpacing};
+  margin-bottom: ${v.xlSpacing};
 `;
 
-export const SCardLabel = styled.h4`
+// Area Charts
+export const ChartsContainer = styled.div`
   display: flex;
-  justify-content: center;
-  margin: ${v.mdSpacing} 0;
-
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
-  text-align: center;
-  color: ${({ theme }) => theme.textTitle};
-  letter-spacing: 1.38px;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  gap: 4%;
 `;
 
-export const SCardText = styled.p`
-  margin-top: 1.42rem;
+export const AreaCharts = styled.div`
+  width: 50%;
 
-  text-align: center;
-  font-size: 0.92rem;
+  padding: 2%;
+  
+  border-radius: 47px;
+  background: ${({ theme }) => theme.bg5};
+  box-shadow:  -20px 20px 23px ${({ theme }) => theme.cardShadow},
+                20px -20px 23px ${({ theme }) => theme.cardShadow2};
+
+  :hover{
+    transform: scale(1.02);
+  }
+`;
+
+// Geo Charts
+export const SText = styled.p`
+  padding: 0 1.73rem;
+
+  text-align: justify;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
   color: ${({ theme }) => theme.textCard};
 `;

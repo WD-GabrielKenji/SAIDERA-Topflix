@@ -23,7 +23,7 @@ import {
   SToggleThumb,
 } from "./styles";
 
-import { logoSVG, homeIcon, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon, iconMundo } from "../../assets";
+import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon, sideGlobo } from "../../assets";
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
@@ -119,8 +119,8 @@ export function Sidebar() {
 
 const linksArray = [
   {
-    label: "Mundo Todo",
-    icon: <img src={iconMundo} alt="Página principal" />, 
+    label: "Global",
+    icon: <img src={sideGlobo} alt="Página principal" />, 
     to: "/mundi",
   },
   {
@@ -161,4 +161,9 @@ const secondaryLinksArray = [
     icon: <img src={guiaIcon} alt="Ajuda" />, 
     to: "/guia",
   },
+  /* {
+    label: "",
+    icon: <img src={guiaIcon} alt="Ajuda" />, 
+    to: "/guia",
+  } */
 ];

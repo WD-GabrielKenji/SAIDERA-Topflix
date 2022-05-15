@@ -11,6 +11,7 @@ export const lightTheme = {
   text: "rgb(45, 45, 45)",
   textCard: "rgb(112, 112, 112)",
   textTitle: "rgb(51, 51, 51)",
+  subTitle: "rgb(0, 84, 153)",
 
   primary: "rgb(52, 131, 235)",
   pink: "rgb(204, 0, 102)",
@@ -33,9 +34,9 @@ export const darkTheme = {
   text: "rgb(210, 210, 210)",
   textCard: "rgb(202, 202, 202)",
   textTitle: "rgb(194, 130, 20)",
+  subTitle: "rgb(255, 102, 150)",
 
-  primary: "rgb(52, 131, 235)", // Color Options Thema
-  pink: "rgb(255, 0, 128)",
+  primary: "rgb(52, 131, 235)",
   gold: "rgb(255, 187, 85)",
 
   cardShadow: "rgb(10, 10, 10)",
