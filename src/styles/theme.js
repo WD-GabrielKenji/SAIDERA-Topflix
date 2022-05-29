@@ -35,6 +35,7 @@ export const darkTheme = {
   textCard: "rgb(202, 202, 202)",
   textTitle: "rgb(194, 130, 20)",
   subTitle: "rgb(255, 102, 150)",
+  pink: "rgb(10, 255, 31)",
 
   primary: "rgb(52, 131, 235)",
   gold: "rgb(255, 187, 85)",

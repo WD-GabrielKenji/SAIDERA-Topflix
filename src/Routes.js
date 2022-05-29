@@ -8,6 +8,7 @@ import Eua from "./pages/Eua/Eua";
 import Japao from "./pages/Japao/Japao";
 import ReinoUnido from "./pages/ReinoUnido/ReinoUnido";
 import Mundo from "./pages/Mundo/Mundo";
+import { Analise } from "./components/Analise/Analise";
 
 export function Routes() {
   return (
@@ -36,8 +37,8 @@ export function Routes() {
       <Route exact path="/jp">
         <Japao/>
       </Route>
-      <Route exact path="/guia">
-        <h1>*ADICIONAR*</h1>
+      <Route exact path="/analise">
+        <Analise/>
       </Route>
     </Switch>
   );

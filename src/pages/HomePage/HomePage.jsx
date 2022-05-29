@@ -35,7 +35,7 @@ export function HomePage() {
             Saiba quais gêneros de filmes e séries são os melhores para seu
             investimento.
           </SText>
-          <SButton href="/guia">Get Started!</SButton>
+          <SButton href="/mundi">Get Started!</SButton>
         </SHomeContent>
 
         <SLogo src={HomeLogo} alt="logo" />

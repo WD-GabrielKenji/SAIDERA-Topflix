@@ -67,7 +67,7 @@ export default function ReinoUnido() {
             <STitle>Análise</STitle>
           </SLabel>
           <SDivider />
-          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para a parte de Ação.
+          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para a parte de Comédia.
           </SText>
         </AreaCharts>
       </ChartsContainer>

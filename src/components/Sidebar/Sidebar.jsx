@@ -23,7 +23,7 @@ import {
   SToggleThumb,
 } from "./styles";
 
-import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, guiaIcon, sideGlobo } from "../../assets";
+import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, analiseIcon, sideGlobo } from "../../assets";
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
@@ -157,13 +157,8 @@ const linksArray = [
 
 const secondaryLinksArray = [
   {
-    label: "Guia",
-    icon: <img src={guiaIcon} alt="Ajuda" />, 
-    to: "/guia",
+    label: "Análise de IA",
+    icon: <img src={analiseIcon} alt="Ajuda" />, 
+    to: "/analise",
   },
-  /* {
-    label: "",
-    icon: <img src={guiaIcon} alt="Ajuda" />, 
-    to: "/guia",
-  } */
 ];
