@@ -13,8 +13,7 @@ import {
   SLinkIcon,
   SLinkLabel,
   SLogo,
-  SSearch,
-  SSearchIcon,
+  NameLogo,
   SSidebar,
   SSidebarButton,
   STheme,
@@ -27,19 +26,9 @@ import { logoSVG, iconEUA, iconBR, iconUK, iconKOR, iconCAN, iconJP, analiseIcon
 import { ThemeContext } from "./../../App";
 
 export function Sidebar() {
-  const searchRef = useRef(null);
   const { setTheme, theme } = useContext(ThemeContext);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { pathname } = useLocation();
-
-  const searchClickHandler = () => {
-    if (!sidebarOpen) {
-      setSidebarOpen(true);
-      searchRef.current.focus();
-    } else {
-      // search functionality *Adicionar*
-    }
-  };
 
   return (
     <SSidebar isOpen={sidebarOpen}>
@@ -56,24 +45,13 @@ export function Sidebar() {
         <SLink to={"/"} >
           <img src={logoSVG} alt="logo" />
           {sidebarOpen && (
-            <h2>SAIDEIRA <span>TopFlix</span></h2>
+            <NameLogo>
+              <span class="logo1">SAIDEIRA</span>
+              <span class="logo2">TopFlix</span>
+            </NameLogo>
           )}
         </SLink>
       </SLogo>
-
-      <SSearch
-        onClick={searchClickHandler}
-        style={!sidebarOpen ? { width: `fit-content` } : {}}
-      >
-        <SSearchIcon>
-          <AiOutlineSearch />
-        </SSearchIcon>
-        <input
-          ref={searchRef}
-          placeholder="Search"
-          style={!sidebarOpen ? { width: 0, padding: 0 } : {}}
-        />
-      </SSearch>
 
       <SDivider />
 

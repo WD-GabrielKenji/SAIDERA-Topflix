@@ -20,7 +20,8 @@ export const SSidebarButton = styled.button`
   height: 32px;
   border-radius: 50%;
   background: ${({ theme }) => theme.bg};
-  box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
+  box-shadow: 0 0 4px ${({ theme }) => theme.bg3},
+    0 0 7px ${({ theme }) => theme.bg};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,52 +33,34 @@ export const SSidebarButton = styled.button`
 export const SLogo = styled.div`
   display: flex;
   align-items: center;
-  font-family: 'Noto Serif', sans-serif;
+  font-family: "Noto Serif", sans-serif;
   font-size: 12px;
 
   img {
+    margin-left: 10px;
     max-width: 100%;
+    width: 50px;
     height: auto;
     display: inline;
   }
-  h2{
-    color: ${({ theme, isActive }) => !isActive ? theme.gold : theme.gold};
-    margin-left: 5px;
-  
-    span{
-      color: rgba(215, 21, 21, 0.95);
-    }
-  }
+
   cursor: pointer;
   margin-bottom: ${v.lgSpacing};
 `;
 
-export const SSearch = styled.div`
-  background: ${({ theme }) => theme.bgAlpha};
-  border: 1px solid ${({ theme }) => theme.bg3};
-  border-radius: ${v.borderRadius};
-  input {
-    padding: 0 ${v.smSpacing};
-    font-family: inherit;
-    letter-spacing: inherit;
-    font-size: 16px;
-    width: 100%;
-    outline: none;
-    border: none;
-    color: inherit;
-    background: transparent;
+export const NameLogo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+
+  
+  .logo1 {
+    color: ${({ theme, isActive }) => (!isActive ? theme.gold : theme.gold)};
+    margin-left: 5px;
   }
-  display: flex;
-`;
-
-export const SSearchIcon = styled.button`
-  ${btnReset};
-  padding: calc(${v.mdSpacing} - 2px) ${v.mdSpacing};
-  display: flex;
-  cursor: pointer;
-
-  svg {
-    font-size: 20px;
+  .logo2 {
+    color: rgba(215, 21, 21, 0.95);
   }
 `;
 
@@ -89,7 +72,8 @@ export const SDivider = styled.div`
 `;
 
 export const SLinkContainer = styled.div`
-  background: ${({ theme, isActive }) => !isActive ? `transparent` : theme.bg3};
+  background: ${({ theme, isActive }) =>
+    !isActive ? `transparent` : theme.bg3};
   border-radius: ${v.borderRadius};
   margin: 8px 0;
 
@@ -120,7 +104,7 @@ export const SLinkLabel = styled.span`
   display: block;
   flex: 1;
   margin-left: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 `;
 
@@ -144,7 +128,7 @@ export const SThemeToggler = styled.button`
   width: 36px;
   height: 20px;
   border-radius: 10px;
-  background: ${({ theme, isActive }) => !isActive ? theme.bg3 : theme.gold};
+  background: ${({ theme, isActive }) => (!isActive ? theme.bg3 : theme.gold)};
 
   position: relative;
 `;
