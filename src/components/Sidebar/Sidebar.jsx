@@ -102,14 +102,14 @@ const linksArray = [
     to: "/mundi",
   },
   {
-    label: "Estados Unidos",
-    icon: <img src={iconEUA} alt="Estados Unidos da América" />,
-    to: "/eua",
-  },
-  {
     label: "Brasil",
     icon: <img src={iconBR} alt="Brasil" />,
     to: "/br",
+  },
+  {
+    label: "Estados Unidos",
+    icon: <img src={iconEUA} alt="Estados Unidos da América" />,
+    to: "/eua",
   },
   {
     label: "Reino Unido",

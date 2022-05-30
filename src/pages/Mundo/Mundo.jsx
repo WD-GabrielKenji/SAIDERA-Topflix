@@ -68,7 +68,7 @@ export default function Mundo() {
             <STitle>Análise</STitle>
           </SLabel>
           <SDivider />
-          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para a parte de Ação.
+          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para Filme em Ação e Série em Outros gêneros.
           </SText>
         </AreaCharts>
       </ChartsContainer>
@@ -80,21 +80,25 @@ const linkArrayCards = [
   {
     icon: <img src={iconAcao} alt="Ação" />,
     label: "Ação",
-    grapic: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="28%" genero="acao"/>,
   },
   {
     icon: <img src={iconTerror} alt="Terror" />,
     label: "Terror",
-    grapic: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="0%" genero="terror"/>,
   },
   {
     icon: <img src={iconComedia} alt="Comédia" />,
     label: "Comédia",
-    grapic: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="3%" genero="comedia"/>,
   },
   {
     icon: <img src={iconRomance} alt="Romance" />,
     label: "Romance",
-    grapic: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="27%" genero="romance"/>,
+  },{
+    icon: <img src={iconRomance} alt="Romance" />,
+    label: "Outros",
+    grapic: <ChartDonut data={dataGenero} porcentagem="45%" genero="outros"/>,
   },
 ];

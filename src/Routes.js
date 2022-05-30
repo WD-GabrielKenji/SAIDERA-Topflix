@@ -19,11 +19,11 @@ export function Routes() {
       <Route exact path="/mundi">
         <Mundo/>
       </Route>
-      <Route exact path="/eua">
-        <Eua/>
-      </Route>
       <Route exact path="/br">
         <Brasil/>
+      </Route>
+      <Route exact path="/eua">
+        <Eua/>
       </Route>
       <Route exact path="/uk">
         <ReinoUnido/>

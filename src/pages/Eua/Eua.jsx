@@ -1,5 +1,5 @@
 import { ChartDonut, ChartBar, ChartGeo } from "../../components/Grafico/Chart";
-import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosCanada";
+import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosEua";
 import { 
   Cards,
   SDivider,
@@ -15,7 +15,7 @@ import {
 
 import { iconAcao, iconComedia, iconFilmes, iconGlobo, iconRomance, iconSeries, iconTerror, iconUnicorn } from "../../assets";
 
-export default function Canada() {
+export default function Eua() {
   return (
     <>
       <CardsContainer>
@@ -67,7 +67,7 @@ export default function Canada() {
             <STitle>Análise</STitle>
           </SLabel>
           <SDivider />
-          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para a parte de Ação.
+          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para Filme e Série em Outros gêneros.
           </SText>
         </AreaCharts>
       </ChartsContainer>
@@ -79,21 +79,26 @@ const linkArrayCards = [
   {
     icon: <img src={iconAcao} alt="Ação" />,
     label: "Ação",
-    graphic: <ChartDonut data={dataGenero} porcentagem="40%" genero="acao"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="19%" genero="acao"/>,
   },
   {
     icon: <img src={iconTerror} alt="Terror" />,
     label: "Terror",
-    graphic: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="0%" genero="terror"/>,
   },
   {
     icon: <img src={iconComedia} alt="Comédia" />,
     label: "Comédia",
-    graphic: <ChartDonut data={dataGenero} porcentagem="30%" genero="comedia"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="23%" genero="comedia"/>,
   },
   {
     icon: <img src={iconRomance} alt="Romance" />,
     label: "Romance",
-    graphic: <ChartDonut data={dataGenero} porcentagem="15%" genero="romance"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="23%" genero="romance"/>,
+  },
+  {
+    icon: <img src={iconRomance} alt="Romance" />,
+    label: "Outros",
+    graphic: <ChartDonut data={dataGenero} porcentagem="35%" genero="outros"/>,
   },
 ];

@@ -88,15 +88,17 @@ export function ChartGeo({ regiao }) {
 
 export function ChartDonut({ data, porcentagem, genero }) {
 
-  const COLORS = ['transparent', 'transparent', 'transparent', 'transparent'];
+  const COLORS = ['transparent', 'transparent', 'transparent', 'transparent', 'transparent'];
   if (genero === 'acao') {
     COLORS[0] = '#8884d8';
   } else if (genero === 'terror') {
     COLORS[1] = '#00C49F';
   } else if (genero === 'comedia') {
     COLORS[2] = '#FFBB28';
-  } else {
+  } else if (genero === 'romance'){
     COLORS[3] = '#FF8042';
+  }else {
+    COLORS[4] = '#144FFF';
   }
 
   return (

@@ -1,5 +1,5 @@
 import { ChartDonut, ChartBar, ChartGeo } from "../../components/Grafico/Chart";
-import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosBrasil";
+import { dataFilme, dataSerie, dataGenero } from "../../dados/dadosCoreia";
 
 import { 
   Cards,
@@ -68,7 +68,7 @@ export default function Coreia() {
             <STitle>Análise</STitle>
           </SLabel>
           <SDivider />
-          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para a parte de Ação.
+          <SText>De acordo com o que foi apresentado nos gráficos e a porcentagem dos gêneros, conseguimos chegar a conclusão que o melhor investimento seria para Filmes de Outros gêneros e Séries de Romance.
           </SText>
         </AreaCharts>
       </ChartsContainer>
@@ -80,21 +80,26 @@ const linkArrayCards = [
   {
     icon: <img src={iconAcao} alt="Ação" />,
     label: "Ação",
-    graphic: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="9%" genero="acao"/>,
   },
   {
     icon: <img src={iconTerror} alt="Terror" />,
     label: "Terror",
-    graphic: <ChartDonut data={dataGenero} porcentagem="25%" genero="terror"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="1%" genero="terror"/>,
   },
   {
     icon: <img src={iconComedia} alt="Comédia" />,
     label: "Comédia",
-    graphic: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="0%" genero="comedia"/>,
   },
   {
     icon: <img src={iconRomance} alt="Romance" />,
     label: "Romance",
-    graphic: <ChartDonut data={dataGenero} porcentagem="15%" genero="romance"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="35%" genero="romance"/>,
+  },
+  {
+    icon: <img src={iconRomance} alt="Romance" />,
+    label: "Outros",
+    graphic: <ChartDonut data={dataGenero} porcentagem="55%" genero="outros"/>,
   },
 ];
