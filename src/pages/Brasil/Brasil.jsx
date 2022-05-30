@@ -6,6 +6,7 @@ import {
   CardsContainer,
   SLabel,
   SIcon,
+  SGraphic,
   STitle,
   SText,
   AreaCharts,
@@ -18,14 +19,14 @@ export default function Brasil() {
   return (
     <>
       <CardsContainer>
-        {linkArrayCards.map(({ icon, label, text }) => (
+        {linkArrayCards.map(({ icon, label, graphic }) => (
           <Cards key={label}>
             <SLabel>
-              <SIcon>{icon}</SIcon>
+              {icon}
               <STitle>{label}</STitle>
             </SLabel>
             <SDivider />
-            <SText>{text}</SText>
+            <SGraphic>{graphic}</SGraphic>
           </Cards>
         ))}
       </CardsContainer>
@@ -78,21 +79,21 @@ const linkArrayCards = [
   {
     icon: <img src={iconAcao} alt="Ação" />,
     label: "Ação",
-    text: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
   },
   {
     icon: <img src={iconTerror} alt="Terror" />,
     label: "Terror",
-    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
   },
   {
     icon: <img src={iconComedia} alt="Comédia" />,
     label: "Comédia",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
   },
   {
     icon: <img src={iconRomance} alt="Romance" />,
     label: "Romance",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
+    graphic: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
   },
 ];
