@@ -14,6 +14,10 @@ export const Cards = styled.div`
   width: 37vh;
   height: 38vh;
   padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   border-radius: 47px;
   background: ${({ theme }) => theme.bg5};
@@ -29,6 +33,8 @@ export const SLabel = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  gap: 0.625rem;
 `;
 
 export const SIcon = styled.div`
@@ -40,6 +46,12 @@ export const STitle = styled.h2`
   font-size: 1.3rem;
   color: ${({ theme }) => theme.textTitle};
   letter-spacing: 1.2px;
+`;
+
+export const SGraphic = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const SDivider = styled.div`

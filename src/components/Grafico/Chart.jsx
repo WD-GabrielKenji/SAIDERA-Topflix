@@ -101,7 +101,7 @@ export function ChartDonut({ data, porcentagem, genero }) {
 
   return (
     <Grafico>
-      <PieChart width={170} height={140}>
+      <PieChart width={140} height={140}>
         <Pie
           data={data}
           cx="50%"

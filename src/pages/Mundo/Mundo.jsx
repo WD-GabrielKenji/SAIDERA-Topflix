@@ -8,6 +8,7 @@ import {
   SLabel,
   SIcon,
   STitle,
+  SGraphic,
   SText,
   AreaCharts,
   ChartsContainer
@@ -19,14 +20,14 @@ export default function Mundo() {
   return (
     <>
       <CardsContainer>
-        {linkArrayCards.map(({ icon, label, text }) => (
+        {linkArrayCards.map(({ icon, label, grapic }) => (
           <Cards key={label}>
             <SLabel>
-              <SIcon>{icon}</SIcon>
+              {icon}
               <STitle>{label}</STitle>
             </SLabel>
             <SDivider />
-            <SText>{text}</SText>
+            <SGraphic>{grapic}</SGraphic>
           </Cards>
         ))}
       </CardsContainer>
@@ -34,7 +35,7 @@ export default function Mundo() {
       <ChartsContainer>
         <AreaCharts>
           <SLabel>
-            <SIcon><img src={iconFilmes} alt="Filmes" /></SIcon>
+            <img src={iconFilmes} alt="Filmes" />
             <STitle>Filmes</STitle>
           </SLabel>
           <SDivider />
@@ -79,21 +80,21 @@ const linkArrayCards = [
   {
     icon: <img src={iconAcao} alt="Ação" />,
     label: "Ação",
-    text: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="35%" genero="acao"/>,
   },
   {
     icon: <img src={iconTerror} alt="Terror" />,
     label: "Terror",
-    text: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="15%" genero="terror"/>,
   },
   {
     icon: <img src={iconComedia} alt="Comédia" />,
     label: "Comédia",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="25%" genero="comedia"/>,
   },
   {
     icon: <img src={iconRomance} alt="Romance" />,
     label: "Romance",
-    text: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
+    grapic: <ChartDonut data={dataGenero} porcentagem="25%" genero="romance"/>,
   },
 ];
