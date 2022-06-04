@@ -13,7 +13,7 @@ import {
   ChartsContainer
 } from "../styles";
 
-import { iconAcao, iconComedia, iconFilmes, iconGlobo, iconRomance, iconSeries, iconTerror, iconUnicorn } from "../../assets";
+import { iconAcao, iconComedia, iconFilmes, iconGlobo, iconRomance, iconOutros, iconSeries, iconTerror, iconUnicorn } from "../../assets";
 
 export default function Canada() {
   return (
@@ -96,7 +96,7 @@ const linkArrayCards = [
     graphic: <ChartDonut data={dataGenero} porcentagem="22%" genero="romance"/>,
   },
   {
-    icon: <img src={iconRomance} alt="Romance" />,
+    icon: <img src={iconOutros} alt="Outros" />,
     label: "Outros",
     graphic: <ChartDonut data={dataGenero} porcentagem="17%" genero="outros"/>,
   },

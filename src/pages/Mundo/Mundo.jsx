@@ -14,7 +14,7 @@ import {
   ChartsContainer
 } from "../styles";
 
-import { iconAcao, iconComedia, iconFilmes, iconGlobo, iconRomance, iconSeries, iconTerror, iconUnicorn } from "../../assets";
+import { iconAcao, iconComedia, iconFilmes, iconGlobo, iconRomance, iconOutros, iconSeries, iconTerror, iconUnicorn } from "../../assets";
 
 export default function Mundo() {
   return (
@@ -97,7 +97,7 @@ const linkArrayCards = [
     label: "Romance",
     grapic: <ChartDonut data={dataGenero} porcentagem="27%" genero="romance"/>,
   },{
-    icon: <img src={iconRomance} alt="Romance" />,
+    icon: <img src={iconOutros} alt="Outros" />,
     label: "Outros",
     grapic: <ChartDonut data={dataGenero} porcentagem="45%" genero="outros"/>,
   },

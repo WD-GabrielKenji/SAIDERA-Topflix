@@ -5,15 +5,16 @@ import { v } from "../styles/variables";
 // Cards
 export const CardsContainer = styled.div`
   display: flex;
+  gap: 10px;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: ${v.xlSpacing};
 `;
 
 export const Cards = styled.div`
-  width: 37vh;
-  height: 38vh;
-  padding: 2%;
+  width: 240px;
+  height: 320px;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +44,7 @@ export const SIcon = styled.div`
 
 export const STitle = styled.h2`
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: ${({ theme }) => theme.textTitle};
   letter-spacing: 1.2px;
 `;

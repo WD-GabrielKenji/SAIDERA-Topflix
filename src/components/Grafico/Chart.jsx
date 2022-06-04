@@ -103,16 +103,16 @@ export function ChartDonut({ data, porcentagem, genero }) {
 
   return (
     <Grafico>
-      <PieChart width={140} height={140}>
+      <PieChart width={120} height={120}>
         <Pie
           data={data}
           cx="50%"
           cy="50%"
           position="center"
-          innerRadius="67%"
+          innerRadius="70%"
           outerRadius="90%"
-          paddingAngle={5}
-          minAngle={40}
+          paddingAngle={2}
+          minAngle={50}
           dataKey="value"
         >
           {data.map((entry, index) => (
