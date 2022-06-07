@@ -65,7 +65,7 @@ const arrayCards = [
     text3: "Resumindo é um algoritmo feito para recomendações de filmes, onde várias plataformas usam diversos modelos para aplicarem na regra de negócio das suas aplicações, tendo como objetivo passar a seus usuários possíveis novas escolhas a serem assistidas.",
   },
   {
-    label: "Análise da IA para Filmes",
+    label: "Análise da IA para Séries",
     icon: <img src={graficoIcon} alt="imagem de grafico" />,
     image: <img src={analiseSerie} alt="analise sobre filmes" />,
     toImg: "https://imgur.com/xw7tIF3",
